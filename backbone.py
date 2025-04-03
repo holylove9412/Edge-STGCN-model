@@ -70,11 +70,11 @@ class EdgeAttributeEmbedding(nn.Module):
 class EdgeSTGCN(nn.Module):
     def __init__(self, args):
         super(EdgeSTGCN, self).__init__()
-        self.n_node, self.n_in = getattr(args, 'state_shape', (362, 1))
+        self.n_node, self.n_in = getattr(args, 'state_shape', (376, 1))
         self.b_in = 1
         self.n_out = 1
-        self.seq_in = getattr(args, 'seq_in', 24)
-        self.seq_out = getattr(args, 'seq_out', 12)
+        self.seq_in = getattr(args, 'seq_in', 20)
+        self.seq_out = getattr(args, 'seq_out', 20)
         self.embed_size = getattr(args, 'embed_size', 64)
         self.hidden_dim = getattr(args, "hidden_dim", 64)
         self.n_sp_layer = getattr(args, "n_sp_layer", 3)
@@ -190,11 +190,11 @@ class EdgeSTGCN(nn.Module):
 class STGCN(nn.Module):
     def __init__(self, args):
         super(STGCN, self).__init__()
-        self.n_node, self.n_in = getattr(args, 'state_shape', (362, 1))
+        self.n_node, self.n_in = getattr(args, 'state_shape', (376, 1))
         self.b_in = 1
         self.n_out = 1
-        self.seq_in = getattr(args, 'seq_in', 24)
-        self.seq_out = getattr(args, 'seq_out', 12)
+        self.seq_in = getattr(args, 'seq_in', 20)
+        self.seq_out = getattr(args, 'seq_out', 20)
         self.embed_size = getattr(args, 'embed_size', 64)
         self.hidden_dim = getattr(args, "hidden_dim", 64)
         self.n_sp_layer = getattr(args, "n_sp_layer", 3)
@@ -282,11 +282,11 @@ class STGCN(nn.Module):
 class MLPNetwork(nn.Module):
     def __init__(self, args):
         super(MLPNetwork, self).__init__()
-        self.n_node, self.n_in = getattr(args, 'state_shape', (362, 1))
+        self.n_node, self.n_in = getattr(args, 'state_shape', (376, 1))
         self.b_in = 1
         self.n_out = 1
-        self.seq_in = getattr(args, 'seq_in', 24)
-        self.seq_out = getattr(args, 'seq_out', 12)
+        self.seq_in = getattr(args, 'seq_in', 20)
+        self.seq_out = getattr(args, 'seq_out', 20)
         self.embed_size = getattr(args, 'embed_size', 64)
         self.hidden_dim = getattr(args, "hidden_dim", 64)
         self.n_sp_layer = getattr(args, "n_sp_layer", 3)
